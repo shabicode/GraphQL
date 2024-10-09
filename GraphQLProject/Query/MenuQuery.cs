@@ -22,3 +22,4 @@ namespace GraphQLProject.Query
 	}
 }
 
+ 
