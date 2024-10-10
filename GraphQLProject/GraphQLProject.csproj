@@ -22,7 +22,6 @@
     <None Remove="Type\" />
     <None Remove="Schema\" />
     <None Remove="Query\" />
-    <None Remove="Mutation\" />
     <None Remove="Controllers\" />
   </ItemGroup>
   <ItemGroup>
@@ -32,7 +31,6 @@
     <Folder Include="Type\" />
     <Folder Include="Schema\" />
     <Folder Include="Query\" />
-    <Folder Include="Mutation\" />
     <Folder Include="Controllers\" />
   </ItemGroup>
 </Project>
