@@ -14,6 +14,7 @@ namespace GraphQLProject.Query
 			{
 				return menuRepository.GetAllMenu();
 			});
+
 			Field<MenuType>("Menu").Arguments(new QueryArguments(new QueryArgument<IntGraphType> { Name = "menuId"})).Resolve(context =>
 			{
 				return menuRepository.GetMenuById(context.GetArgument<int>("menuId"));
