@@ -3,6 +3,8 @@ using GraphQLProject.Interfaces;
 using GraphQLProject.Query;
 using GraphQLProject.Type;
 using GraphQLProject.Schema;
+using GraphQLProject.Mutation;
+using GraphQLProject.Models;
 using GraphQL.Types;
 using GraphQL;
 using GraphiQl;
@@ -16,6 +18,8 @@ builder.Services.AddControllers();
 builder.Services.AddTransient<IMenuRepository, MenuRepository>();
 builder.Services.AddTransient<MenuType>();
 builder.Services.AddTransient<MenuQuery>();
+builder.Services.AddTransient<MenuMutation>();
+builder.Services.AddTransient<MenuInputType>();
 builder.Services.AddTransient<ISchema, MenuSchema>();
 
 builder.Services.AddGraphQL(b => b.AddAutoSchema<ISchema>().AddSystemTextJson());
