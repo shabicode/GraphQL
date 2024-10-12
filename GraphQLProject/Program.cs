@@ -8,6 +8,9 @@ using GraphQLProject.Models;
 using GraphQL.Types;
 using GraphQL;
 using GraphiQl;
+using GraphQLProject.Data;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -23,7 +26,9 @@ builder.Services.AddTransient<MenuInputType>();
 builder.Services.AddTransient<ISchema, MenuSchema>();
 
 builder.Services.AddGraphQL(b => b.AddAutoSchema<ISchema>().AddSystemTextJson());
-
+builder.Services.AddDbContext<GraphQLDbContext>(option => option.UseSqlServer(builder.Configuration.GetConnectionString("GraphQLDbContextConnection")));
+builder.Services.AddDbContext<GraphQLDbContext>(options =>
+        options.UseSqlServer(builder.Configuration.GetConnectionString("GraphQLDbContextConnection")));
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
