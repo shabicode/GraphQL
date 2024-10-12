@@ -15,6 +15,10 @@
     <PackageReference Include="graphiql" Version="2.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.10" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.10" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.10">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+      <PrivateAssets>all</PrivateAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
@@ -25,6 +29,7 @@
     <None Remove="Schema\" />
     <None Remove="Query\" />
     <None Remove="Controllers\" />
+    <None Remove="Data\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
@@ -34,5 +39,6 @@
     <Folder Include="Schema\" />
     <Folder Include="Query\" />
     <Folder Include="Controllers\" />
+    <Folder Include="Data\" />
   </ItemGroup>
 </Project>
