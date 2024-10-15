@@ -22,7 +22,7 @@ namespace GraphQLProject.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Menus", x => x.Id);
+                    table.PrimaryKey("PK_Menus", x => x.Id); 
                 });
         }
 
