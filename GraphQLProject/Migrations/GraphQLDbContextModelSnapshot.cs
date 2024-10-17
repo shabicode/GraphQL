@@ -40,7 +40,7 @@ namespace GraphQLProject.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Menus");
+                    b.ToTable("Menus", (string)null);
 
                     b.HasData(
                         new
